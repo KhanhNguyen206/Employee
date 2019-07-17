@@ -93,7 +93,7 @@ public class EmployeeController {
         return modelAndView;
     }
 
-    @PostMapping("/delete-employee/{id}")
+    @GetMapping("/delete-employee/{id}")
     public String delete(@PathVariable Integer id) {
         Employee employee = employeeService.findById(id);
         if (employee != null) {
