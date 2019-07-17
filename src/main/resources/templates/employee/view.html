@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Test</title>
 </head>
 <body>
-
+<div>
+    <a th:href="@{/}">Home</a>
+    <a th:href="@{/employees}">Employee</a>
+</div>
+<div>
+    <div>
+        <label>Code: </label>
+        <label th:text="${employee.getEmployeeCode()}"></label>
+    </div>
+    <div>
+        <label>Name: </label>
+        <label th:text="${employee.getName()}"></label>
+    </div>
+    <div>
+        <label>Type: </label>
+        <label th:text="${employee.type.nameType}"></label>
+    </div>
+    <div>
+        <label>Birthday: </label>
+        <label th:text="${employee.getBirthday()}"></label>
+    </div>
+    <div>
+        <label>Sex: </label>
+        <label th:text="${employee.getSex()}"></label>
+    </div>
+    <div>
+        <label>Phone Number: </label>
+        <label th:text="${employee.getPhoneNumber()}"></label>
+    </div>
+    <div>
+        <label>CMND: </label>
+        <label th:text="${employee.getCmnd()}"></label>
+    </div>
+    <div>
+        <label>Email: </label>
+        <label th:text="${employee.getEmail()}"></label>
+    </div>
+    <div>
+        <label>Address: </label>
+        <label th:text="${employee.getAddress()}"></label>
+    </div>
+</div>
 </body>
 </html>
